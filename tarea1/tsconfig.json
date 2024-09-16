@@ -1,0 +1,12 @@
+{
+    "include": ["./src/**/*.ts"],
+    "exclude": ["src/*¨*/*.spec.ts"], //Excluye los archivos de test
+    "compilerOptions": { //Minimo necesario para trabajar un api de node con typescript
+        "outDir": "dist",
+        "target": "ES6",
+        "noImplicitAny": true,
+        "esModuleInterop": true, //Cada uno de los archivos es un modulo, no generan ruido entre sí
+
+
+    }
+}
