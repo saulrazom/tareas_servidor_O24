@@ -7,11 +7,9 @@ import routes from './routes';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-
 const dbUrl = process.env.DB_URL;
-console.log("Mongo URL: " + dbUrl);
 
-
+app.use(express.json());
 connect(dbUrl as string).then( res => {
     console.log('Connected to database');
     app.use(routes);
